@@ -14,7 +14,7 @@ A collection of slides for the Byte Size Ruby series
 
 ### OR 
 
-#### View the slides online using the links below! 👇
+#### View the slides as PDFs online using the links below! 👇
 
 ### Slides
 [00-ruby-basics](https://www.slideshare.net/secret/dkf0k6s5d4km1T)
