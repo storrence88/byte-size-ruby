@@ -1,5 +1,5 @@
 ## byte-size-ruby
-A collection of slides for my Byte Size Ruby series
+A collection of slides for the Byte Size Ruby series
 
 #### Feel free to clone the repo to run the slides on your local machine
 
