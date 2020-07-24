@@ -2,9 +2,13 @@
 A collection of slides for my Byte Size Ruby series
 
 Feel free to clone the repo to run the slides on your local machine
+
 `https://github.com/storrence88/byte-size-ruby.git`
+
 `cd` into the directory that corresponds to the slides you want to see (ex: `cd 00-ruby-basics`)
+
 Run `yarn install` then `yarn start`
+
 Open up your browser to `localhost:8000` and enjoy!
 
 
