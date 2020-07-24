@@ -1,7 +1,7 @@
 ## byte-size-ruby
 A collection of slides for my Byte Size Ruby series
 
-Feel free to clone the repo to run the slides on your local machine
+#### Feel free to clone the repo to run the slides on your local machine
 
 - `git clone https://github.com/storrence88/byte-size-ruby.git`
 
@@ -12,7 +12,9 @@ Feel free to clone the repo to run the slides on your local machine
 - Open up your browser to `localhost:8000` and enjoy!
 
 
-#### OR view the slides online using the links below! 👇
+### OR 
+
+#### View the slides online using the links below! 👇
 
 ### Slides
 [00-ruby-basics](https://www.slideshare.net/secret/dkf0k6s5d4km1T)
