@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Byte Size Ruby</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -177,7 +177,7 @@
 
 				<section>
 					<section>
-						Using methods in <span style='color:#9f1129;'>Ruby!
+						Using methods in <span style='color:#9f1129;'>Ruby</span>!
 					</section>
 
 					<section data-auto-animate>
@@ -262,7 +262,7 @@
 
 					<section data-auto-animate>
 						<pre class='ruby' data-id="code-animation2"><code data-trim data-noescape>
-							"100".to_i
+							x = "100".to_i
 
 							# The dot means...
 							the message to_i is being sent to the receiver "100"
@@ -271,7 +271,7 @@
 					
 					<section data-auto-animate>
 						<pre class='ruby' data-id="code-animation2"><code data-trim data-noescape>
-							"100".to_i
+							x = "100".to_i
 
 							# The dot means...
 							the message to_i is being sent to the receiver "100"
@@ -295,6 +295,58 @@
 							x = 100
             </code></pre>
 					</section>
+
+					<section>
+						<p>So why the double terminology?</p>
+						<p class="fragment">Why bother saying "sending the <em style='color: orange'>message</em> <code>to_i</code>"</p>
+						<p class="fragment">and</p>
+						<p class="fragment">"Calling the <em style='color: cornflowerblue'>method</em> <code>to_i</code>"?</p>
+					</section>
+
+					<section>
+						Because they aren't quite the same
+					</section>
+
+					<section>
+						<p>In Ruby, we send a <em style='color: orange'>message</em> to a receiving <em style='color: cornflowerblue'>object</em></p>
+						<p class="fragment">and the <em style='color: cornflowerblue'>object</em> executes the corresponding method</p>
+						<p class="fragment">but there's not always a corresponding method! 😮</p>
+					</section>
+
+					<section data-auto-animate>
+						<p>In that scenario, no method is actually called!</p>
+						<p class='fragment'>You can put literally anything to the right of the <span style='color: #f6348b'>dot!</p>
+						<p class='fragment'>but there is no guarantee that the receiver will have a method that matches the message you send</p>
+						<pre class='ruby fragment' data-id="code-animation3"><code data-trim data-noescape data-line-numbers>
+							str = 'seattle krakens'
+            </code></pre>
+					</section>
+					
+					<section data-auto-animate>
+						<p>In that scenario, no method is actually called!</p>
+						<p>You can put literally anything to the right of the <span style='color: #f6348b'>dot!</p>
+						<p>but there is no guarantee that the receiver will have a method that matches the message you send</p>
+						<pre class='ruby' data-id="code-animation3"><code data-trim data-noescape data-line-numbers>
+							str = 'seattle krakens'
+							str.please_upcase_this_string_for_me_k_thx
+            </code></pre>
+					</section>
+					
+					<section data-auto-animate>
+						<p>In that scenario, no method is actually called!</p>
+						<p>You can put literally anything to the right of the <span style='color: #f6348b'>dot!</p>
+						<p>but there is no guarantee that the receiver will have a method that matches the message you send</p>
+						<pre class='ruby' data-id="code-animation3"><code data-trim data-noescape data-line-numbers>
+							str = 'seattle krakens'
+							str.please_upcase_this_string_for_me_k_thx
+
+							# undefined method `please_upcase_this_string_for_me_k_thx' for "seattle krakens":String
+            </code></pre>
+					</section>
+				</section>
+
+				<section data-background-image="./transition3.jpg">
+					Let's practice some <span style='color:#9f1129;'>Ruby</span>!
 				</section>
 			</div>
 		</div>
