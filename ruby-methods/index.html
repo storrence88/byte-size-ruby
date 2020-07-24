@@ -1,0 +1,370 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Byte Size Ruby</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/night-owl.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <p>Byte Size Ruby</p>
+          <img src="https://cdn.emojidex.com/emoji/seal/Ruby.png" alt="ruby" style='height:64px;'>
+        </section>
+
+        <section data-background-image='./transition.png'>
+          <p class="fragment">One week ago...</p>
+        </section>
+
+        <section data-background-image='./transition2.png'>
+          <section>
+            Let's talk about the parts that make up <span style='color:#9f1129;'>Ruby</span>!
+          </section>
+
+          <section>
+            <p style='font-size: 3.5rem;'>Ruby is made up of 4 types of identifiers</p>
+            <ul>
+              <li class="fragment">Variables</li>
+              <li class="fragment">Constants</li>
+              <li class="fragment">Keywords</li>
+              <li class="fragment">Method Names</li>
+            </ul>
+          </section>
+
+          <section data-auto-animate>
+            Variables
+          </section>
+
+          <section data-auto-animate>
+            Variables
+            <pre class='ruby' data-id="code-animation"><code data-trim data-noescape data-line-numbers='1-2'>
+              # Local variable
+              num = 12
+            </code></pre>
+          </section>
+          
+          <section data-auto-animate>
+            Variables
+            <pre class='ruby' data-id="code-animation"><code data-trim data-noescape data-line-numbers='4-5'>
+              # Local variable
+              num = 12
+
+              # Instance variable
+              @name = 'Juan'
+            </code></pre>
+          </section>
+          
+          <section data-auto-animate>
+            Variables
+            <pre class='ruby' data-id="code-animation"><code data-trim data-noescape data-line-numbers='7-8'>
+              # Local variable
+              num = 12
+
+              # Instance variable
+              @name = 'Juan'
+
+              # Class variable
+              @@running_total = 9000
+            </code></pre>
+          </section>
+          
+          <section data-auto-animate>
+            Variables
+            <pre class='ruby' data-id="code-animation"><code data-trim data-noescape data-line-numbers='10-11'>
+              # Local variable
+              num = 12
+
+              # Instance variable
+              @name = 'Juan'
+
+              # Class variable
+              @@running_total = 9000
+
+              # Global variable
+              $LOAD_PATH
+            </code></pre>
+          </section>
+
+          <section data-auto-animate>
+            Constants
+            <pre class='ruby' data-id="code-animation-2"><code data-trim data-noescape data-line-numbers>
+              # Begins with an uppercase letter
+              class Dog < CuteAnimals
+                def initialize(name, gender)
+                  @name = name
+                  @gender = gender
+                end
+              end
+            </code></pre>
+          </section>
+          
+          <section data-auto-animate>
+            Constants
+            <pre class='ruby' data-id="code-animation-2"><code data-trim data-noescape data-line-numbers='2'>
+              # Begins with an uppercase letter
+              class Dog < CuteAnimals # Uses camel case
+                def initialize(name, gender)
+                  @name = name
+                  @gender = gender
+                end
+              end
+            </code></pre>
+          </section>
+          
+          <section data-auto-animate>
+            Constants
+            <pre class='ruby' data-id="code-animation-2"><code data-trim data-noescape data-line-numbers='9-11'>
+              # Begins with an uppercase letter
+              class Dog < CuteAnimals # Uses camel case
+                def initialize(name, gender)
+                  @name = name
+                  @gender = gender
+                end
+              end
+
+              # Or can be entirely uppercase
+              FRUIT = 'apple'
+              puts FRUIT
+              => apple
+            </code></pre>
+          </section>
+
+          <section data-auto-animate>
+            Keywords
+            <pre class='ruby' data-id="code-animation-3"><code data-trim data-noescape data-line-numbers>
+              if true
+                🌮
+              else
+                😢
+              end
+
+              class Jollibee
+              end
+
+              def wear_a_mask
+                😷
+              end
+            </code></pre>
+          </section>
+          
+          <section data-auto-animate>
+            Method name
+            <pre class='ruby' data-id="code-animation-3"><code data-trim data-noescape data-line-numbers>
+              colors = ['red', 'green', 'blue']
+              str = '!mooB'
+              
+              upcase_colors = colors.map { |color| color.upcase }
+              => ["RED", "GREEN", "BLUE"]
+
+              str.reverse
+              => "Boom!"
+            </code></pre>
+          </section>
+        </section>
+
+        <section>
+					Back to the present!
+				</section>
+
+				<section>
+					<section>
+						Using methods in <span style='color:#9f1129;'>Ruby</span>!
+					</section>
+
+					<section data-auto-animate>
+						<p>In Ruby, almost everything is an object</p>
+						<p class="fragment">This includes:</p>
+						<pre class='ruby fragment' data-id="code-animation1"><code data-trim data-noescape data-line-numbers='1-2'>
+							# Strings
+							'This is a string!'
+            </code></pre>
+					</section>
+					
+					<section data-auto-animate>
+						<p>In Ruby, almost everything is an object</p>
+						<p>This includes:</p>
+						<pre class='ruby fragment' data-id="code-animation1"><code data-trim data-noescape data-line-numbers='4-5'>
+							# Strings
+							'This is a string!'
+
+							# Numbers
+							525_600
+            </code></pre>
+					</section>
+					
+					<section data-auto-animate>
+						<p>In Ruby, almost everything is an object</p>
+						<p>This includes:</p>
+						<pre class='ruby fragment' data-id="code-animation1"><code data-trim data-noescape data-line-numbers='7-8'>
+							# Strings
+							'This is a string!'
+
+							# Numbers
+							525_600
+
+							# Arrays
+							['Beau', nil, 'EZ', true, 'Flash', :name, 'Pain']
+            </code></pre>
+					</section>
+					
+					<section data-auto-animate>
+						<p>In Ruby, almost everything is an object</p>
+						<p>This includes:</p>
+						<pre class='ruby fragment' data-id="code-animation1"><code data-trim data-noescape data-line-numbers='10-12'>
+							# Strings
+							'This is a string!'
+
+							# Numbers
+							525_600
+
+							# Arrays
+							['Beau', nil, 'EZ', true, 'Flash', :name, 'Pain']
+
+							# Hashes
+							{ one: 'one', :two => 'two', 'three': 'three', 'four' => 'four' }
+							{ :one=>"one", :two=>"two", :three=>"three", "four"=>"four" }
+            </code></pre>
+					</section>
+
+					<section>
+						Every <em style='color: cornflowerblue'>object</em> in ruby is capable of understanding a certain set of <em style='color: orange'>messages</em>
+					</section>
+
+					<section>
+						Each <em style='color: orange'>message</em> that an <em style='color: cornflowerblue'>object</em> understands, corresponds to a <em style='color: orange'>method</em>!
+					</section>
+
+					<section data-auto-animate>
+						<p><em style='color: orange'>Message</em> sending is achieved using the <em style='color: #f6348b'>dot</em> operator!</p>
+
+					</section>
+
+					<section data-auto-animate>
+						<p><em style='color: cornflowerblue'>object</em><span style='color: #f6348b'>.</span><em style='color: orange'>message</em></p>
+						<p>The message to the right of the dot is sent to the object to the left of the dot</p>
+						<p class="fragment">There are other ways to send a message to an object that have slightly more advanced use cases</p>
+					</section>
+
+					<section data-auto-animate>
+						<pre class='ruby' data-id="code-animation2"><code data-trim data-noescape>
+							x = "100".to_i
+            </code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<pre class='ruby' data-id="code-animation2"><code data-trim data-noescape>
+							x = "100".to_i
+
+							# The dot means...
+							the message to_i is being sent to the receiver "100"
+            </code></pre>
+					</section>
+					
+					<section data-auto-animate>
+						<pre class='ruby' data-id="code-animation2"><code data-trim data-noescape>
+							x = "100".to_i
+
+							# The dot means...
+							the message to_i is being sent to the receiver "100"
+
+							# Alternatively, you could also say...
+							The method to_i is being called on the string "100"
+            </code></pre>
+					</section>
+					
+					<section data-auto-animate>
+						<pre class='ruby' data-id="code-animation2"><code data-trim data-noescape>
+							x = "100".to_i
+
+							# The dot means...
+							the message to_i is being sent to the receiver "100"
+
+							# Alternatively, you could also say...
+							The method to_i is being called on the string "100"
+
+							# The result of this method call is...
+							x = 100
+            </code></pre>
+					</section>
+
+					<section>
+						<p>So why the double terminology?</p>
+						<p class="fragment">Why bother saying "sending the <em style='color: orange'>message</em> <code>to_i</code>"</p>
+						<p class="fragment">and</p>
+						<p class="fragment">"Calling the <em style='color: cornflowerblue'>method</em> <code>to_i</code>"?</p>
+					</section>
+
+					<section>
+						Because they aren't quite the same
+					</section>
+
+					<section>
+						<p>In Ruby, we send a <em style='color: orange'>message</em> to a receiving <em style='color: cornflowerblue'>object</em></p>
+						<p class="fragment">and the <em style='color: cornflowerblue'>object</em> executes the corresponding method</p>
+						<p class="fragment">but there's not always a corresponding method! 😮</p>
+					</section>
+
+					<section data-auto-animate>
+						<p>In that scenario, no method is actually called!</p>
+						<p class='fragment'>You can put literally anything to the right of the <span style='color: #f6348b'>dot!</p>
+						<p class='fragment'>but there is no guarantee that the receiver will have a method that matches the message you send</p>
+						<pre class='ruby fragment' data-id="code-animation3"><code data-trim data-noescape data-line-numbers>
+							str = 'seattle krakens'
+            </code></pre>
+					</section>
+					
+					<section data-auto-animate>
+						<p>In that scenario, no method is actually called!</p>
+						<p>You can put literally anything to the right of the <span style='color: #f6348b'>dot!</p>
+						<p>but there is no guarantee that the receiver will have a method that matches the message you send</p>
+						<pre class='ruby' data-id="code-animation3"><code data-trim data-noescape data-line-numbers>
+							str = 'seattle krakens'
+							str.please_upcase_this_string_for_me_k_thx
+            </code></pre>
+					</section>
+					
+					<section data-auto-animate>
+						<p>In that scenario, no method is actually called!</p>
+						<p>You can put literally anything to the right of the <span style='color: #f6348b'>dot!</p>
+						<p>but there is no guarantee that the receiver will have a method that matches the message you send</p>
+						<pre class='ruby' data-id="code-animation3"><code data-trim data-noescape data-line-numbers>
+							str = 'seattle krakens'
+							str.please_upcase_this_string_for_me_k_thx
+
+							# undefined method `please_upcase_this_string_for_me_k_thx' for "seattle krakens":String
+            </code></pre>
+					</section>
+				</section>
+
+				<section data-background-image="./transition3.jpg">
+					Let's practice some <span style='color:#9f1129;'>Ruby</span>!
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
