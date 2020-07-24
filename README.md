@@ -1,6 +1,4 @@
-# byte-size-ruby
-<img src="https://cdn.emojidex.com/emoji/seal/Ruby.png" alt="ruby" style='height:10px;'>
-<hr>
+## byte-size-ruby
 A collection of slides for my Byte Size Ruby series
 
 ### Slides
